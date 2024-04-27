@@ -8,9 +8,7 @@ import (
 )
 
 func ListenAndServe() {
-	go func() {
-		if err := http.ListenAndServe(":8000", nil); err != nil {
-			log.Fatal(err)
-		}
-	}()
+	if err := http.ListenAndServe(":8000", nil); err != nil {
+		log.Fatal(err)
+	}
 }
